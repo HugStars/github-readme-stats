@@ -79,7 +79,7 @@ function calculateRank({
         TOTAL_WEIGHT;
 
     // const level = LEVELS[THRESHOLDS.findIndex((t) => rank * 100 <= t)];
-    const level = rank
+    const level = ((1 - rank) * 100).toFixed(2) + "%"
 
     return { level, percentile: rank * 100 };
 }
